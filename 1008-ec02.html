@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch6 切版練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <script type="text/javascript">
+        window.onload = function () {
+            //遮蔽鍵盤事件
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //F12
+                if (e.keyCode == 123) {
+                    return false;
+                    //Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+                    return false;
+                    //Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+                    return false;
+                    //Ctrl+U
+                } else if ((e.ctrlKey) && (e.keyCode == 85)) {
+                    return false;
+                }
+            };
+            //遮蔽滑鼠右鍵
+            document.oncontextmenu = function () {
+                return false;
+            }
+        }
+
+    </script>
+    <style>
+        .box01 {
+            height: 200px;
+            background-image: url(images/landspace01.avif);
+        }
+
+        .box02 {
+            height: 180px;
+            margin-top: 5px;
+            line-height: 180px;
+            background-color: var(--mycolor01);
+            color: var(--textcolor04);
+        }
+
+        .box03 {
+            border: 2px solid var(--mycolor05);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 5px var(--mycolor05);
+
+        }
+
+        .box03 .h4 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .box02 {
+                height: 100px;
+                line-height: 100px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .box02 {
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                line-height: 220px;
+                background-color: var(--mycolor05);
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .box02:hover {
+                background-color: var(--mycolor02);
+                color: var(--textcolor02);
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .box02 {
+                width: 260px;
+                height: 260px;
+                line-height: 260px;
+                background-color: var(--mycolor02);
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+
+            .box02:hover {
+                background-color: var(--textcolor02);
+                color: var(--mycolor01);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-none d-sm-block">
+                <div class="box01 bg-info bg-img"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1 fw-900 text-center bg-success">
+                    選單01
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1 fw-900 text-center bg-success">
+                    選單02
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1 fw-900 text-center bg-success">
+                    選單03
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1 fw-900 text-center bg-success">
+                    選單04
+                </div>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <img src="images/landspace01.avif" class="img-fluid" alt="">
+                    <div class="h4 fw-900">旅遊景點介紹001</div>
+                    <p>的確每年移動機械參與只有四周表演小心給他十大也就早已，風情不但學科開發流行門派民眾，機械改造圖形統計高校導演，唱片新型女朋友怎樣支付運動怎樣共有高達果然同志請。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <img src="images/landspace04.avif" class="img-fluid" alt="">
+                    <div class="h4 fw-900">旅遊景點介紹001</div>
+                    <p>的確每年移動機械參與只有四周表演小心給他十大也就早已，風情不但學科開發流行門派民眾，機械改造圖形統計高校導演，唱片新型女朋友怎樣支付運動怎樣共有高達果然同志請。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <img src="images/landspace01.avif" class="img-fluid" alt="">
+                    <div class="h4 fw-900">旅遊景點介紹001</div>
+                    <p>的確每年移動機械參與只有四周表演小心給他十大也就早已，風情不但學科開發流行門派民眾，機械改造圖形統計高校導演，唱片新型女朋友怎樣支付運動怎樣共有高達果然同志請。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <img src="images/landspace04.avif" class="img-fluid" alt="">
+                    <div class="h4 fw-900">旅遊景點介紹001</div>
+                    <p>的確每年移動機械參與只有四周表演小心給他十大也就早已，風情不但學科開發流行門派民眾，機械改造圖形統計高校導演，唱片新型女朋友怎樣支付運動怎樣共有高達果然同志請。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <img src="images/landspace01.avif" class="img-fluid" alt="">
+                    <div class="h4 fw-900">旅遊景點介紹001</div>
+                    <p>的確每年移動機械參與只有四周表演小心給他十大也就早已，風情不但學科開發流行門派民眾，機械改造圖形統計高校導演，唱片新型女朋友怎樣支付運動怎樣共有高達果然同志請。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <img src="images/landspace04.avif" class="img-fluid" alt="">
+                    <div class="h4 fw-900">旅遊景點介紹001</div>
+                    <p>的確每年移動機械參與只有四周表演小心給他十大也就早已，風情不但學科開發流行門派民眾，機械改造圖形統計高校導演，唱片新型女朋友怎樣支付運動怎樣共有高達果然同志請。</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3 d-none d-md-block fw-900 text-center bg-secondary py-2 h4">
+                POWER BY XXX 2026.10
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
