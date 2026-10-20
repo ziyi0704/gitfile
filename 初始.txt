@@ -1,0 +1,25 @@
+1.開啟.env
+2.修改
+    DB_CONNECTION=mysql
+3.將以下幾行的#去除
+    # DB_HOST=127.0.0.1
+    # DB_PORT=3306
+    # DB_DATABASE=laravel
+    # DB_USERNAME=root
+    # DB_PASSWORD=
+4.將DB_DATABASE=改為自己mysql資料庫名稱
+5.將SESSION_DRIVER=database 改為SESSION_DRIVER=file
+6.將QUEUE_CONNECTION=database及CACHE_STORE=database
+改為QUEUE_CONNECTION=file 及 CACHE_STORE=file
+
+如果SESSION_DRIVER,QUEUE_CONNECTION, CACHE_STORE用原本的database
+則要在資料庫中建立相對應的資料表
+
+7.開啟config/app.php
+8.將'timezone' => 'UTC', 改為 'timezone' => 'Asia/Taipei',
+時區改為台北(中間差了8小時)
+
+9.開啟config/session.php
+10.將'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
+改為'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', true),
+當瀏覽器關閉時,同時清除暫存(session)資料
